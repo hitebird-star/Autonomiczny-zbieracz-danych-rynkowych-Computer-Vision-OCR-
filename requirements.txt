@@ -1,0 +1,15 @@
+# Zależności zewnętrzne (rdzeń)
+numpy
+opencv-python
+Pillow
+
+# Windows OCR (tylko Windows) — wbudowany OCR systemu przez PyWinRT.
+# Gdy niedostępny, wrapper win_ocr.py degraduje się bezpiecznie.
+winrt-Windows.Media.Ocr; platform_system == "Windows"
+winrt-Windows.Graphics.Imaging; platform_system == "Windows"
+winrt-Windows.Storage.Streams; platform_system == "Windows"
+winrt-Windows.Globalization; platform_system == "Windows"
+winrt-runtime; platform_system == "Windows"
+
+# Odczyt zapasowy modelem wizyjnym (Ollama) działa przez lokalne HTTP (urllib,
+# biblioteka standardowa) — nie wymaga pakietu z pip. Wymaga uruchomionego Ollamy.
