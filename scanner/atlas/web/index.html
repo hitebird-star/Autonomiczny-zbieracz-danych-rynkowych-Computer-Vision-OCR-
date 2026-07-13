@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atlas rynku — Glevia2</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header id="topbar">
+    <strong>Atlas rynku</strong>
+    <span class="stat" id="stat-total">sklepy: –</span>
+    <span class="stat" id="stat-located">metryczne: –</span>
+    <span class="stat" id="stat-stand">na postoju: –</span>
+    <span class="stat" id="stat-sellers">sprzedawcy: –</span>
+    <span class="stat" id="stat-calib">kalibracja: –</span>
+    <span class="spacer"></span>
+    <button data-view="2d" class="viewbtn active">2D</button>
+    <button data-view="iso" class="viewbtn">Izometria 3D</button>
+    <button id="btn-reload">Przeładuj</button>
+    <button id="btn-settings">Ustawienia</button>
+  </header>
+
+  <main>
+    <canvas id="map"></canvas>
+    <div id="tooltip" hidden></div>
+
+    <aside id="settings" hidden>
+      <h3>Ustawienia scrapera / Atlasu</h3>
+      <form id="settings-form"></form>
+      <div class="row">
+        <button id="btn-save" type="button">Zapisz</button>
+        <button id="btn-close-settings" type="button">Zamknij</button>
+      </div>
+      <p id="settings-msg" class="muted"></p>
+    </aside>
+
+    <div id="legend">
+      <span><i class="dot atlas"></i> metryczna (po kalibracji)</span>
+      <span><i class="dot game"></i> zgrubna (coord postoju)</span>
+      <span><i class="dot live"></i> live (widziane teraz)</span>
+    </div>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

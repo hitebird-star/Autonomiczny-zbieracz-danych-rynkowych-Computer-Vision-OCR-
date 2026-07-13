@@ -1,0 +1,51 @@
+:root {
+  --bg: #10141b;
+  --panel: #1a2230;
+  --line: #2c3a4a;
+  --text: #d8e0ea;
+  --muted: #8a97a8;
+  --atlas: #37d67a;
+  --game: #d6a93a;
+  --live: #3aa0ff;
+  --accent: #4f8cff;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
+  font: 13px/1.4 "Segoe UI", system-ui, sans-serif; overflow: hidden; }
+
+#topbar { display: flex; align-items: center; gap: 12px; padding: 8px 14px;
+  background: var(--panel); border-bottom: 1px solid #263041; height: 46px; }
+#topbar strong { font-size: 15px; letter-spacing: .3px; }
+.stat { color: var(--muted); font-variant-numeric: tabular-nums; }
+.spacer { flex: 1; }
+button { background: #263041; color: var(--text); border: 1px solid #33415a;
+  border-radius: 6px; padding: 6px 12px; cursor: pointer; font-size: 12px; }
+button:hover { background: #2f3c52; }
+.viewbtn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+main { position: relative; height: calc(100% - 46px); }
+#map { display: block; width: 100%; height: 100%; cursor: grab; }
+#map:active { cursor: grabbing; }
+
+#tooltip { position: absolute; pointer-events: none; background: #0c1017ee;
+  border: 1px solid #33415a; border-radius: 6px; padding: 6px 9px; font-size: 12px;
+  max-width: 240px; z-index: 5; }
+#tooltip b { color: #fff; }
+.muted { color: var(--muted); }
+
+#legend { position: absolute; left: 12px; bottom: 12px; display: flex; gap: 14px;
+  background: #0c1017cc; border: 1px solid #263041; border-radius: 6px; padding: 6px 10px; }
+#legend span { display: flex; align-items: center; gap: 6px; color: var(--muted); }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.dot.atlas { background: var(--atlas); } .dot.game { background: var(--game); } .dot.live { background: var(--live); }
+
+#settings { position: absolute; right: 0; top: 0; width: 340px; height: 100%;
+  background: var(--panel); border-left: 1px solid #263041; padding: 14px; overflow-y: auto; z-index: 10; }
+#settings h3 { margin: 0 0 12px; }
+#settings-form { display: grid; gap: 10px; }
+.field { display: grid; gap: 3px; }
+.field label { color: var(--muted); font-size: 11px; }
+.field input { background: #0f1520; border: 1px solid #33415a; color: var(--text);
+  border-radius: 5px; padding: 6px 8px; font-size: 12px; }
+#settings .row { display: flex; gap: 8px; margin-top: 14px; }
+#btn-save { background: var(--accent); border-color: var(--accent); color: #fff; }
