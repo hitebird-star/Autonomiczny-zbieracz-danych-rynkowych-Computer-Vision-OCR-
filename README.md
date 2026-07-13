@@ -1,0 +1,1 @@
+# Autonomiczny-zbieracz-danych-rynkowych-Computer-Vision-OCR-
